@@ -1,3 +1,5 @@
+
+import { QuoteService } from './../services/quotes.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -10,6 +12,7 @@ import { FavoritePage } from './../pages/favorite/favorite';
 import { LibraryPage } from './../pages/library/library';
 import { QuotesPage } from './../pages/quotes/quotes';
 import { TabsPage } from './../pages/tabs/tabs';
+import { QuotePage } from './../pages/quote/quote';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { TabsPage } from './../pages/tabs/tabs';
     TabsPage,
     FavoritePage,
     QuotesPage,
-    LibraryPage
+    LibraryPage,
+    QuotePage
   ],
   imports: [
     BrowserModule,
@@ -31,9 +35,11 @@ import { TabsPage } from './../pages/tabs/tabs';
     TabsPage,
     FavoritePage,
     QuotesPage,
-    LibraryPage
+    LibraryPage,
+    QuotePage
   ],
   providers: [
+    QuoteService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

@@ -1,4 +1,9 @@
-export default [
+import { Quote } from './quotes.model';
+
+export const QUOTES_DATA : {
+  category : string,
+  quotes : Quote[],
+  icon : string } [] =  [
   {
     category: 'inspirational',
     quotes: [

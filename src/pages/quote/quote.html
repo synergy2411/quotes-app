@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>quote</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+        {{ quote.person | uppercase }}  
+    </ion-card-header>
+    <ion-card-content>
+      {{ quote.text }}
+      <button ion-button 
+        class="secondary" 
+        (click)="onClose(true)">Unfavorite Me</button>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button class="danger" (click)="onClose()">Close</button>
+
+</ion-content>
